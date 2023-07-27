@@ -34,8 +34,8 @@
            <form name="formValidation" id="formValidation" action="" method="post">
             <!-- 아이디 저장(필드값 유무)-->
           	<div class="mb-3">
-              <label for="uid">* 아이디</label> 
-              <input type="text" class="form-control" id="uid" name="uid" placeholder="" 
+              <label for="id">* 아이디</label> 
+              <input type="text" class="form-control" id="id" name="id" placeholder="" 
               	<c:if test="${not empty cookie.saveid}"> value="${cookie.saveid.value}" </c:if> 
               	<c:if test="${empty cookie.saveid}"> value="" </c:if> 
               	required>
@@ -55,11 +55,11 @@
 				<label class="custom-control-label" for="saveid">아이디 저장</label>
 			</div>
 
-            <div class="mb-4"></div>
+            <div class="mb-4">
             <button class="btn btn-simple mb-3" type="submit">로그인하기</button>
             <button class="btn btn-white mb-3" type="submit"><img class="signImg" src="../img/kakaotalk-icon.png" alt="">카카오 계정으로 로그인</button>
             <button class="btn btn-white mb-3" type="submit"><img class="signImg" src="../img/google-icon.png" alt="">구글 계정으로 로그인</button>
-
+			</div>
             <a href="${request.getContextPath()}/getbag/signup"><div class="already mb-5">계정 만들기</div></a>
           </form>
         </div>

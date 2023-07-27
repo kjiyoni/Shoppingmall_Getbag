@@ -40,12 +40,12 @@
 
             <div class="mb-3">
               <label for="birth">생년월일</label> 
-              <input type="text" class="form-control" id="birth" name="birth" placeholder="YYYY-MM-DD" required>
+              <input type="text" class="form-control" id="birth" name="birth" placeholder="YYYY-MM-DD">
             </div>
             
             <div class="mb-3">
-              <label for="uid">* 아이디</label> 
-              <input type="text" class="form-control" id="uid" name="uid" placeholder="" required>
+              <label for="id">* 아이디</label> 
+              <input type="text" class="form-control" id="id" name="id" placeholder="" required>
             <!--    <button type="button" id="checkDuplicate">중복 확인</button>
  			  <div id="idStatus"></div>-->
             </div>
@@ -60,7 +60,7 @@
               <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
             </div>
             <div class="mb-4"></div>
-            <input class="btn btn-simple mb-3" type="submit" value="가입완료">
+            <input id="signUpBtn" class="btn btn-simple mb-3" type="submit" value="가입완료">
             <a href="<%=request.getContextPath()%>/getbag/signin"><div class="already mb-5">이미 계정이 있습니까?<br>로그인</div></a>
           </form>
         </div>
