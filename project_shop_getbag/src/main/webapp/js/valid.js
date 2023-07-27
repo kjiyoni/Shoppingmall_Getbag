@@ -1,3 +1,5 @@
+document.write('<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>');
+
 $(document).ready(function() {
 	
 	// 비밀번호 passwordComplexity 제약조건
@@ -48,6 +50,16 @@ $(document).ready(function() {
     }
   });
   
+  // 오류메세지 SweetAlert 처리
+  function showErrorAlert(message) {
+    Swal.fire({
+      icon: 'error',
+      title: '오류',
+      text: message,
+      confirmButtonText: '확인'
+    });
+  }
+  
   // 가입완료 버튼 클릭 시 양식 제출을 수동으로 처리
   $("#signUpBtn").on("click", function(e) {
     e.preventDefault(); // Prevent default form submission
@@ -55,7 +67,7 @@ $(document).ready(function() {
     if ($("#formValidation").valid() && $("#aggrement").is(":checked")) {
       $("#formValidation")[0].submit();
     } else {
-      alert("모든 필수 항목을 올바르게 입력해주세요.");
+      showErrorAlert("모든 필수 항목을 올바르게 입력해주세요.");
     }
   });
   
