@@ -14,6 +14,10 @@
 
 <!-- Template Stylesheet -->
 <link href="../css/style.css" rel="stylesheet">
+
+<!-- JavaScript validator -->
+<!--<script defer src="/js/validator.js"></script>
+<script defer src="/js/id-check.js"></script> -->
 </head>
 
 <body>
@@ -27,37 +31,36 @@
       <div class="input-form-backgroud row">
         <div class="input-form col-md-12 mx-auto">
           <h3 class="text-center mb-3 mt-4 fw-bold">회원가입</h3>
-          <form class="needs-validation" novalidate action="#" method="post">
+          <!-- <form class="needs-validation" novalidate action="#" method="post"> -->
+          <form name="formValidation" id="formValidation" action="" method="post">
             <div class="mb-3">
                 <label for="name">* 이름</label>
-                <input type="text" class="form-control" id="uname" name="name" placeholder="" value="" required>
-                <div class="invalid-feedback">이름을 입력해주세요.</div>
+                <input type="text" class="form-control" id="name" name="name" placeholder="" value="" required>
             </div>
 
             <div class="mb-3">
               <label for="birth">생년월일</label> 
               <input type="text" class="form-control" id="birth" name="birth" placeholder="YYYY-MM-DD" required>
-              <div class="invalid-feedback">생년월일을 입력해주세요.</div>
             </div>
             
             <div class="mb-3">
-              <label for="id">* 아이디</label> 
-              <input type="id" class="form-control" id="uid" name="id" placeholder="" required>
-              <div class="invalid-feedback">비밀번호를 입력해주세요.</div>
+              <label for="uid">* 아이디</label> 
+              <input type="text" class="form-control" id="uid" name="uid" placeholder="" required>
+            <!--    <button type="button" id="checkDuplicate">중복 확인</button>
+ 			  <div id="idStatus"></div>-->
             </div>
             
             <div class="mb-3">
               <label for="passwd">* 비밀번호</label> 
               <input type="password" class="form-control" id="passwd" name="passwd" placeholder="" required>
-              <div class="invalid-feedback">비밀번호를 입력해주세요.</div>
             </div>
 
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="aggrement"
-                required> <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+              <input type="checkbox" class="custom-control-input" id="aggrement">
+              <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
             </div>
             <div class="mb-4"></div>
-            <button class="btn btn-simple mb-3" type="submit">가입완료</button>
+            <input class="btn btn-simple mb-3" type="submit" value="가입완료">
             <a href="<%=request.getContextPath()%>/getbag/signin"><div class="already mb-5">이미 계정이 있습니까?<br>로그인</div></a>
           </form>
         </div>
@@ -68,9 +71,15 @@
 
   <!-- =============== Footer =============== -->
 	<jsp:include page="/WEB-INF/views/modules/footer.jsp" />
+	
 
-
-	<!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+	<script src="/js/valid.js"></script>
+	
+
+
 </body>
 </html>

@@ -30,21 +30,22 @@
             <c:if test="${not empty errorMessage}">
                <div class="alert alert-danger text-center">${errorMessage}</div>
             </c:if>
-          <form class="needs-validation" novalidate action="#" method="post">
+         <!--  <form class="needs-validation" novalidate action="#" method="post"> -->
+           <form name="formValidation" id="formValidation" action="" method="post">
             <!-- 아이디 저장(필드값 유무)-->
           	<div class="mb-3">
-              <label for="id">* 아이디</label> 
-              <input type="text" class="form-control" id="uid" name="id" placeholder="" 
+              <label for="uid">* 아이디</label> 
+              <input type="text" class="form-control" id="uid" name="uid" placeholder="" 
               	<c:if test="${not empty cookie.saveid}"> value="${cookie.saveid.value}" </c:if> 
               	<c:if test="${empty cookie.saveid}"> value="" </c:if> 
               	required>
-              <div class="invalid-feedback">이메일을 입력해주세요.</div>
+              <!-- <div class="invalid-feedback">이메일을 입력해주세요.</div>-->
             </div>
             
             <div class="mb-3">
               <label for="passwd">* 비밀번호</label> 
               <input type="password" class="form-control" id="passwd" name="passwd" placeholder="" required>
-              <div class="invalid-feedback">비밀번호를 입력해주세요.</div>
+              <!-- <div class="invalid-feedback">비밀번호를 입력해주세요.</div>-->
             </div>
 
             <!-- 아이디 저장(체크박스 체크 여부) -->
@@ -70,8 +71,11 @@
   <!-- =============== Footer =============== -->
   <jsp:include page="/WEB-INF/views/modules/footer.jsp" />
 
-	<!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+	<script src="/js/valid.js"></script>
 	
 </body>
 </html>

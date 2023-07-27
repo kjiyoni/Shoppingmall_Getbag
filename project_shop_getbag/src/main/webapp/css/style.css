@@ -255,3 +255,19 @@ footer{
     width: 500px;
     height: 250px; 
 }
+
+/********** invalid-feedback **********/
+/* .invalid-feedback {
+    display: none;
+}
+
+.invalid-feedback.text-danger {
+    display: block;
+}*/
+
+label.error{
+	font-weight: 700;
+	display: block;
+	color: #f00;
+	font-size: 14px;
+}
