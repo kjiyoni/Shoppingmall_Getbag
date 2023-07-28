@@ -23,14 +23,14 @@
 
   <!-- =============== Basket Empty =============== -->
   <div class="basket container">
-    <div class="d-flex mt-5">
-      <h4 class="ms-3 fw-bold"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;장바구니 (0)</h4>
+    <div class="d-flex">
+      <h4 class="ms-3 fw-bold"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;장바구니</h4>
     </div>
     <hr style="background: black; height: 3px;">
     <div class="basketbox text-center">
       <h2 class="mb-3 fw-bold" style="margin-top: 10%;">장바구니에 담긴 상품이 없습니다.</h2>
       <h5 class="mb-5">원하시는 가방을 지금 담아보세요!</h5>
-      <a href="#"><button class="btn btn-simple" style="width: 40%; margin-bottom: 10%;" >쇼핑 계속하기</button></a>
+      <a href="<%=request.getContextPath()%>/getbag/product"><button class="btn btn-simple" style="width: 40%; margin-bottom: 10%;" >쇼핑 계속하기</button></a>
       <hr style="background: black; height: 1.5px; margin-bottom: 10%;">
     </div>
   </div>

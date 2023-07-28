@@ -12,7 +12,7 @@ import getbag.shopping.domain.member.dto.Member;
  */
 public interface MemberDao {
 	
-	public boolean create(Connection connection, Member member);
+	public boolean create(Connection connection,  Member member);
 	public Member findByUser(Connection connection,String id, String passwd);
 	public List<Member> findByAll(Connection connection);
 	public Member findById(Connection connection, String id);

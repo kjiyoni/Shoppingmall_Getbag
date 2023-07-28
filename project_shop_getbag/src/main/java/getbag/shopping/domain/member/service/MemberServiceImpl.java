@@ -98,16 +98,16 @@ public class MemberServiceImpl implements MemberService{
 		ServiceFactory serviceFactory = ServiceFactory.getInstance();
 		MemberService memberService = serviceFactory.getMemberService();
 		
-//		Member member = new Member("bangry2", "1111", "김재헌", "1997-01-10", null);
+//		Member member = new Member("bangry1", "1111", "김재헌", "2000-02-10");
 //		member = memberService.registerMember(member);
 //		System.out.println("등록 후 상세정보 : " + member);
-//		
+		
 //		Member loginMember = memberService.isMember("bangry", "1111");
 //		System.out.println(loginMember);
-//		
+		
 //		List<Member> members = memberService.getMembers();
 //		System.out.println(members);
-//		
+		
 //		Member detailMember = memberService.readMember("bangry1");
 //		System.out.println(detailMember);
 		

@@ -9,8 +9,7 @@
 
 MemberService memberService = ServiceFactory.getInstance().getMemberService();
 memberService.isMember("id", "passwd");
-System.out.println("로그인 완료");
+//System.out.println("로그인 완료");
 response.sendRedirect("/getbag/index");
 
 %>
-

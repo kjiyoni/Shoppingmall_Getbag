@@ -25,8 +25,9 @@ public class JdbcMemberDao  implements MemberDao {
 		  .append("     id,")
 		  .append("     passwd,")
 		  .append("     name,")
-		  .append("     birthday)")
-		  .append(" VALUES (?, ?, ?, ?)");
+		  .append("     birthday,")
+		  .append("     regdate)")
+		  .append(" VALUES (?, ?, ?, ?, sysdate)");
 		
 		PreparedStatement pstmt = null;
 		try {
@@ -50,7 +51,7 @@ public class JdbcMemberDao  implements MemberDao {
 	public Member findByUser(Connection connection, String id, String passwd) {
 		Member member = null;
 		StringBuilder sb = new StringBuilder();
-		sb.append(" SELECT id, name, TO_CHAR(regdate, 'yyyy-MM-DD DAY') regdate FROM member")
+		sb.append(" SELECT id, name, TO_CHAR(birthday, 'yyyy-MM-DD DAY') birthday, TO_CHAR(regdate, 'yyyy-MM-DD DAY') regdate FROM member")
 		  .append(" WHERE id = ? AND passwd = ?");
 		
 		PreparedStatement pstmt = null;
@@ -64,10 +65,12 @@ public class JdbcMemberDao  implements MemberDao {
 			if (rs.next()) {			
 				String uid = rs.getString("id");
 				String uname = rs.getString("name");
+				String birthday = rs.getString("birthday");
 				String regdate = rs.getString("regdate");
 				member = new Member();
 				member.setId(uid);
 				member.setName(uname);
+				member.setbirthday(birthday);
 				member.setRegdate(regdate);
 			}
 			

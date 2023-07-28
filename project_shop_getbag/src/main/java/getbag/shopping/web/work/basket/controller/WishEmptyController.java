@@ -15,7 +15,6 @@ public class WishEmptyController implements WebController{
 		// 홈페이지에서 동적 컨텐츠 출력 시 Service 객체 사용
 		return viewName;
 	}
-
 }
 
 
